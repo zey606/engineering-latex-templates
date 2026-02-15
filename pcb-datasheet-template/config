@@ -1,0 +1,14 @@
+% ==========================================================
+%  Project Configuration (edit this file only)
+% ==========================================================
+
+% Document metadata
+\providecommand{\DocRev}{1.0}
+\providecommand{\DocDate}{\today}
+
+% Project identity
+\providecommand{\BoardName}{Your PCB Name}
+\providecommand{\TeamName}{Your Team / Organization}
+
+% Optional: change language here (turkish / english etc.)
+\providecommand{\DocLanguage}{turkish}
