@@ -1,0 +1,15 @@
+\begin{table}[h]
+\centering
+\begin{tabularx}{\linewidth}{@{}p{2.2cm}p{2.2cm}p{2.8cm}X@{}}
+\toprule
+\textbf{Rail} & \textbf{Voltage} & \textbf{Source} & \textbf{Used By} \\
+\midrule
+11V2 & 9--12.6V (nom.) & Battery input & DC/DC input, relay domain \\
+5V1  & 5.0V & AP63205 buck & USB--UART, peripherals (as designed) \\
+3V3  & 3.3V & AP63203 buck & STM32, BNO055, SD card, logic \\
+7V4  & 7.4V (nom.) & Servo rail & Servo connectors (HV servo varsayımı) \\
+\bottomrule
+\end{tabularx}
+\caption{Power rails summary (design-intent).}
+\end{table}
+

@@ -1,0 +1,23 @@
+\section{Interfaces}
+
+\subsection{UART}
+\input{tables/interfaces.tex}
+
+\subsection{I2C}
+\begin{itemize}
+    \item IMU\_SCL / IMU\_SDA: BNO055 bağlantısı
+    \item Pull-up dirençleri: 4.7k--10k aralığı (tasarımda kullanılan değerleri yaz)
+\end{itemize}
+
+\subsection{SPI (SD Card)}
+\begin{itemize}
+    \item MOSI, MISO, SCK, SS
+    \item SD\_CD (card-detect) varsa belirt
+\end{itemize}
+
+\subsection{Analog Inputs}
+\begin{itemize}
+    \item ADC\_A: akım ölçümü (INA139 çıkışı)
+    \item ADC\_V: gerilim ölçümü (gerilim bölücü)
+\end{itemize}
+

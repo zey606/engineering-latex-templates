@@ -1,0 +1,14 @@
+\section{Key Features}
+
+\begin{itemize}
+  \item MCU: STM32F446RET6
+  \item Power input: 3S LiPo (nominal 11.1V, full 12.6V)
+  \item Power conversion: 11V2 to 5V, then 5V to 3.3V (buck converters)
+  \item IMU: BNO055 (I2C interface)
+  \item USB-to-UART: FT232RL (PC communication/debug)
+  \item Current sensing: INA139 (analog output to ADC\_A)
+  \item Voltage sensing: divider network (ADC\_V)
+  \item Data logging: microSD card (SPI interface)
+  \item Safety: relay-based power cut-off + emergency stop input
+  \item External compute link: Raspberry Pi UART (for DVL/automation logic)
+\end{itemize}

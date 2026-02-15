@@ -1,0 +1,13 @@
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{3.0cm}p{3.5cm}p{7.0cm}@{}}
+\toprule
+\textbf{Interface} & \textbf{Signals} & \textbf{Purpose} \\
+\midrule
+USB--UART & FT232\_TX, FT232\_RX & PC ile seri haberleşme, debug/log \\
+RP UART & RP\_UART\_TX, RP\_UART\_RX & Raspberry Pi ile komut/telemetri (DVL/otonom) \\
+SWD & SWDIO, SWCLK & STM32 programlama ve debug \\
+\bottomrule
+\end{tabular}
+\caption{Main communication interfaces.}
+\end{table}

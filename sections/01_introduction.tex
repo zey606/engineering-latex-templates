@@ -1,0 +1,16 @@
+\section{Introduction}
+
+\BoardName, su altı roket sisteminde kontrol, sensör okuma, veri kaydı ve güvenlik (güç kesme) fonksiyonlarını bir araya getiren STM32 tabanlı bir kontrol kartıdır.
+
+\subsection{Overview}
+\BoardName, su altı roket sisteminde kontrol, sensör okuma, veri kaydı ve güvenlik (güç kesme) fonksiyonlarını bir araya getiren STM32 tabanlı bir kontrol kartıdır.
+
+\subsection{System Role}
+\begin{itemize}
+    \item Gerçek zamanlı kontrol: STM32F446
+    \item Sensör arayüzleri: I2C (BNO055), ADC (akım/gerilim)
+    \item Veri kaydı: SD kart (SPI)
+    \item PC bağlantısı: USB--UART (FT232)
+    \item Güvenlik: Röle + Emergency Stop
+    \item Harici işlem birimi: Raspberry Pi UART (DVL/otonom mantık için)
+\end{itemize}
