@@ -1,0 +1,111 @@
+% ==========================================================
+%  Generic PCB Datasheet LaTeX Template
+%
+%  Maintainer: Zeynep Özen
+%  Email: yourmail@example.com
+%  GitHub: github.com/yourusername
+%  License: MIT
+%
+%  Notes:
+%  - Edit config.tex to customize project name/revision/date.
+%  - Keep sections/ and tables/ modular for easy reuse.
+% ==========================================================
+
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Project config (EDIT THIS FILE ONLY) ----------
+\input{config}
+
+% ---------- Encoding / Language ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[\DocLanguage]{babel}
+\usepackage{lmodern}
+
+% ---------- Layout ----------
+\usepackage{geometry}
+\geometry{margin=22mm}
+\usepackage{parskip}
+
+% ---------- Graphics / Tables ----------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+% URLs / underscores in text
+\usepackage{url}
+
+% ---------- Links ----------
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Header / Footer ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{14pt}
+\cfoot{\thepage}
+\lhead{\textbf{\BoardName\ Datasheet}}
+\rhead{Rev \textbf{\DocRev}}
+
+% ---------- Watermark (optional) ----------
+% \usepackage{draftwatermark}
+% \SetWatermarkText{PRELIMINARY}
+% \SetWatermarkScale{0.9}
+% \SetWatermarkLightness{0.92}
+
+% ---------- Title ----------
+\title{\textbf{\BoardName}\\Technical Datasheet\\Rev \DocRev}
+\author{\TeamName}
+\date{\DocDate}
+
+% ---------- Optional: reduce bad line break warnings ----------
+\sloppy
+
+% ---------- Safe Figure Macro ----------
+% Usage:
+%   \SafeFigure{0.85\linewidth}{images/board_top.png}{Top View}
+%
+% If image missing: shows a boxed placeholder, NO compile error.
+\makeatletter
+\newcommand{\SafeFigure}[3]{%
+  \begin{figure}[h!]
+    \centering
+    \IfFileExists{#2}{%
+      \includegraphics[width=#1]{#2}%
+    }{%
+      \fbox{%
+        \parbox{#1}{%
+          \centering\ttfamily
+          \detokenize{#2}\\(missing)
+        }%
+      }%
+    }%
+    \caption{#3}
+  \end{figure}
+}
+\makeatother
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ---------- Sections ----------
+\input{sections/00_frontmatter}
+\input{sections/01_introduction}
+\input{sections/02_features}
+\input{sections/03_block_diagram}
+\input{sections/04_mechanical}
+\input{sections/05_power}
+\input{sections/06_interfaces}
+\input{sections/07_pinout}
+\input{sections/08_protection}
+\input{sections/09_testing_status}
+\input{sections/10_revision_history}
+\input{sections/11_appendix}
+
+\end{document}
